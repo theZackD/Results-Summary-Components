@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    font-family: Hanken Grotesk;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    place-items: center;
+    background-color: #ECF2FF;
+}
+
+.FullCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 51.2rem;
+    width: 73.6rem;
+    aspect-ratio: 1.4375;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 3.2rem;
+    background-color: white;
+    box-shadow: 0 0 3rem hsl(224, 30%, 27%, 20%);
+    
+
+    /* grid-template-areas: "Result Summary"; */
+}
+
+.result {
+    height: 512px;
+    display: grid;
+    grid-template-areas: "result" "score" "gr" "perf";
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(#2F2CE9,#7755FF);
+    border-radius: 3.2rem;
+}
+
+
+
+.score {
+    display: grid;
+    grid-area: score;
+    height: 20rem;
+    grid-template-columns: 1fr 20rem 1fr;
+}
+
+.sc76 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 500;
+    background-image: linear-gradient(hsl(241, 81%, 54%),hsl(252, 100%, 67%));
+    padding: 4rem;
+    box-sizing: border-box;
+    height: 20rem;
+    width: 20rem;
+    font-size: 1.8rem;
+}
+
+span {
+    font-weight: 800;
+    font-size: 7.2rem;
+    color: white;
+}
+
+.sc100, .sc76 {
+    color: #CAC9FF;
+}
+
+
+
+.perf {
+    grid-area: perf;
+    font-size: 1.8rem;
+    width: 26ch;
+    padding-bottom: 5.9rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+.res {
+    grid-area: res;
+    margin-top: 4.5rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+
+/* Summary part */
+
+.summary {
+    height: 51.2rem;
+    display: grid;
+    grid-template-areas: "title" "categories" "button";
+}
+
+
+button {
+    width: 28.8rem;
+    height: 5.6rem;
+    border-radius: 5rem;
+    background-color: #303B59;
+    color: #ECF2FF;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+.cat {
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr;
+    grid-template-areas: "symbole name score";
+    background-color: #2F2CE9;
+    justify-content: center;
+    align-items: center;
+    width: 28.8rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+
+}
+
+
+
+
+.category {
+    display: grid;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.reac {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 10%);
+}
+
+.mem {
+    color: hsl(39, 100%, 56%);
+    background-color:  hsla(39, 100%, 56%, 10%);
+}
+
+.verb {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 10%);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 10%);
+}
+
+.sumtitle {
+    margin-top: 4.5rem;
+    text-align: left;
+    margin-left: 4rem;
+    height: fit-content;
+    margin-bottom: -2rem;
+}
+
+.but {
+    grid-area: button;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.catname {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.catscore {
+    grid-area: score;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: hsla(224, 30%, 27%, 50%);
+    text-align: end;
+    margin-right: 1rem;
+}
+
+strong {
+    color: #303B59;
+}
+
+
+/* Mobile */
+
+@media (max-width:376px) {
+    .FullCard {
+        display: grid;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: 375px;
+    }
+
+    .res {
+        margin-top: 0;
+    }
+
+    .summary {
+        margin-top: -17.6rem;
+    }
+
+    .sc76 {
+        padding: 2rem;
+        box-sizing: border-box;
+        height: 14rem;
+        width: 14rem;
+        font-size: 1.6rem;
+    }
+
+    span {
+        font-size: 5.6rem;
+    }
+
+    .result {
+        margin-top: -16rem;
+
+    }
+
+    .result {
+        height: 35.6rem;
+        display: grid;
+        grid-template-areas: "result" "score" "gr" "perf";
+        grid-template-rows: 7rem 14rem 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-image: linear-gradient(#2F2CE9,#7755FF);
+        border-radius: 0 0 3.2rem 3.2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .perf {
+        font-size: 1.6rem
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .score {
+        display: grid;
+        grid-area: score;
+        height: 14rem;
+        grid-template-columns: 1fr 14rem 1fr;
+    }
+
+    .perf {
+        grid-area: perf;
+        height: 4.05rem;
+    }
+
+    .cat {
+        font-size: 1.6rem;
+    }
+
+}
